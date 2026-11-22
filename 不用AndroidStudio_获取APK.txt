@@ -1,0 +1,19 @@
+AC7916AB 双麦听诊 App：不安装 Android Studio，使用 GitHub 自动生成 APK
+===========================================================
+
+你需要：一个 GitHub 账号、能打开 GitHub 的电脑浏览器。不需要安装 Android Studio、Gradle 或安卓 SDK。
+
+1. 将“AC7916_安卓云编译包.zip”解压到电脑上。
+2. 打开 https://github.com/new ，登录 GitHub 并新建一个仓库。例如取名 AC7916Stethoscope；可选 Private（私有）。初始化时不必添加 README。
+3. 进入新仓库，点击 Add file → Upload files。
+4. 在 Windows 资源管理器中打开解压后的 AC7916_Android_App 文件夹，全选其内容并拖到 GitHub 上传区域，确保包括 app、test、gradle 以及 .github 文件夹；最后点 Commit changes。
+   提醒：Windows 可能隐藏以点开头的 .github 文件夹。如果没上传 .github/workflows/build-apk.yml，浏览器中选择 Add file → Create new file，文件名输入 .github/workflows/build-apk.yml，再复制下载包内对应文件的内容保存。
+5. 打开仓库的 Actions 页面，找到 “构建双麦听诊安卓APK”。如果上传后没有自动开始，点 Run workflow → Run workflow。
+6. 打开成功（绿色勾）的那次构建，在页面下方 Artifacts 中下载 “AC7916_双麦听诊_安卓APK”。它下载的是一个 ZIP，解压后得到 app-debug.apk。
+7. 把 app-debug.apk 传到安卓手机并点击安装。如果系统弹出“允许此来源安装应用”，仅在信任此项目时允许安装。
+
+说明：
+- 这是 Android 调试版 APK（自动使用 GitHub 构建环境签名）；不是 Play 商店正式发布版。后续更新时不要混用不同签名的 APK，必要时先卸载旧版。
+- 当前设备固件只发送 84 字节 MC 波形摘要，App 可以蓝牙扫描连接、AE01/AE02 回传测试、看 AE3C 双通道 RMS/波形和保存 CSV。不能播放真实心音或录制 WAV，必须先升级固件发连续音频流。
+- 当前工程尚未经真实安卓设备编译和运行验证；如果 Actions 显示红叉，请把报错截图给我修正。
+- 不需要上传你的杰理 SDK / 含私钥固件 / 个人资料到 GitHub；本项目只包含独立 Android App 源码。
