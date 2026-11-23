@@ -22,7 +22,7 @@ jobs:
           java-version: '17'
 
       - name: 配置 Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
 
       - name: 安装 Android 35 编译组件
         run: |
