@@ -1,0 +1,151 @@
+apps\common\asr\aisp\aisp.c:337:#if CONFIG_AISP_LINEIN_ADC_CHANNEL == 1 && (CONFIG_AISP_LINEIN_ADC_CHANNEL < CONFIG_AISP_MIC0_ADC_CHANNEL || CONFIG_AISP_LINEIN_ADC_CHANNEL < CONFIG_AISP_MIC1_ADC_CHANNEL)
+apps\common\asr\aisp\aisp.c:559:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL);
+apps\common\asr\aisp\aisp.c:562:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL);
+apps\common\asr\aisp\aisp.c:567:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL) | BIT(CONFIG_AISP_LINEIN_ADC_CHANNEL);
+apps\common\asr\aisp\aisp.c:570:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_LINEIN_ADC_CHANNEL);
+apps\common\asr\aisp\aisp.c:574:    req.enc.volume = CONFIG_AISP_MIC_ADC_GAIN;
+apps\common\asr\jlkws\jlkws.c:450:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL);
+apps\common\asr\jlkws\jlkws.c:452:    req.enc.volume = CONFIG_AISP_MIC_ADC_GAIN;
+apps\common\asr\jlkws\jlkws.c:494:#if defined CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE && defined CONFIG_AISP_LINEIN_ADC_CHANNEL && defined CONFIG_AEC_LINEIN_CHANNEL_ENABLE
+apps\common\asr\jlkws\jlkws.c:535:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\common\asr\roobo\roobo.c:338:    req.enc.volume = CONFIG_AISP_MIC_ADC_GAIN;   //录音音量
+apps\common\asr\roobo\roobo.c:345:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL) | BIT(CONFIG_AISP_LINEIN_ADC_CHANNEL);
+apps\common\asr\roobo\roobo.c:348:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_LINEIN_ADC_CHANNEL);
+apps\common\asr\roobo\roobo.c:353:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL);
+apps\common\asr\roobo\roobo.c:356:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL);
+apps\common\asr\wanson\wanson.c:380:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL);
+apps\common\asr\wanson\wanson.c:383:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL);
+apps\common\asr\wanson\wanson.c:388:    req.enc.channel_bit_map = DISABLE_AEC_CHANNEL ? BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL) : \
+apps\common\asr\wanson\wanson.c:389:                              BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL) | BIT(CONFIG_AISP_LINEIN_ADC_CHANNEL);
+apps\common\asr\wanson\wanson.c:392:    req.enc.channel_bit_map = DISABLE_AEC_CHANNEL ? BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) : BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL);
+apps\common\asr\wanson\wanson.c:396:    req.enc.volume = CONFIG_AISP_MIC_ADC_GAIN;
+apps\common\asr\wanson\wanson.c:501:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL);
+apps\common\asr\wanson\wanson.c:504:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL);
+apps\common\asr\wanson\wanson.c:509:    req.enc.channel_bit_map = DISABLE_AEC_CHANNEL ? BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL) : \
+apps\common\asr\wanson\wanson.c:510:                              BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL) | BIT(CONFIG_AISP_LINEIN_ADC_CHANNEL);
+apps\common\asr\wanson\wanson.c:513:    req.enc.channel_bit_map = DISABLE_AEC_CHANNEL ? BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) : BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL);
+apps\common\asr\wanson\wanson.c:517:    req.enc.volume = CONFIG_AISP_MIC_ADC_GAIN;
+apps\common\audio_music\usb_audio_api.c:91:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\common\audio_music\usb_audio_api.c:178:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\common\audio_music\usb_audio_api.c:220:#if defined CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE && defined CONFIG_AISP_LINEIN_ADC_CHANNEL && defined CONFIG_AEC_LINEIN_CHANNEL_ENABLE
+apps\common\audio_music\usb_audio_api.c:727:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\common\audio_music\usb_audio_api.c:771:#if defined CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE && defined CONFIG_AISP_LINEIN_ADC_CHANNEL && defined CONFIG_AEC_LINEIN_CHANNEL_ENABLE
+apps\common\example\audio\asr\main.c:415:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL);
+apps\common\example\audio\asr\main.c:418:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL);
+apps\common\example\audio\asr\main.c:423:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL) | BIT(CONFIG_AISP_LINEIN_ADC_CHANNEL);
+apps\common\example\audio\asr\main.c:426:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_LINEIN_ADC_CHANNEL);
+apps\common\example\audio\asr\main.c:430:    req.enc.volume = CONFIG_AISP_MIC_ADC_GAIN;
+apps\common\example\bluetooth\edr\bt_music\bt_decode.c:648:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\common\example\bluetooth\edr\bt_music\bt_decode.c:697:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\common\example\bluetooth\edr\bt_music\bt_decode.c:738:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\common\example\Devkitboard_test\mic_test.c:198:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\common\example\Devkitboard_test\mic_test.c:200:    req.enc.channel_bit_map = BIT(CONFIG_AISP_MIC0_ADC_CHANNEL) | BIT(CONFIG_AISP_MIC1_ADC_CHANNEL);
+apps\common\example\Devkitboard_test\mic_test.c:201:    req.enc.volume = CONFIG_AISP_MIC_ADC_GAIN;
+apps\common\example\Devkitboard_test\mic_test.c:226:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\common\LLM\audio\audio_input.c:316:#if defined CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE && defined CONFIG_AISP_LINEIN_ADC_CHANNEL && defined CONFIG_AEC_LINEIN_CHANNEL_ENABLE
+apps\common\LLM\duer\intelligent_duer\duer_record.c:150:#if defined CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE && defined CONFIG_AISP_LINEIN_ADC_CHANNEL && defined CONFIG_AEC_LINEIN_CHANNEL_ENABLE
+apps\common\LLM\duer\my_platform\my_platform_record.c:138:#if defined CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE && defined CONFIG_AISP_LINEIN_ADC_CHANNEL && defined CONFIG_AEC_LINEIN_CHANNEL_ENABLE
+apps\common\LLM\volc_agent\main.c:93:#ifndef CONFIG_AISP_MIC0_ADC_CHANNEL
+apps\common\LLM\volc_agent\main.c:94:#define CONFIG_AISP_MIC0_ADC_CHANNEL    1
+apps\common\LLM\volc_agent\main.c:96:#define VOLC_MIC_ADC_CHANNEL_BIT        BIT(CONFIG_AISP_MIC0_ADC_CHANNEL)
+apps\common\LLM\volc_agent\main.c:379:#if defined CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE && \
+apps\common\net\voiceprint_cfg.c:395:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\common\product_test_tool\product_net.c:1378:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\demo\demo_audio\include\app_config.h:215:#define CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE      //四路ADC硬件全开
+apps\demo\demo_audio\include\app_config.h:223:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\demo\demo_audio\include\app_config.h:224:#define CONFIG_AISP_MIC1_ADC_CHANNEL        3		//本地唤醒右mic通道
+apps\demo\demo_audio\include\app_config.h:226:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\demo\demo_DevKitBoard\board\wl82\DevKitBoard.c:379:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\demo\demo_DevKitBoard\include\app_config.h:180:#define CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE              //四路ADC硬件全开
+apps\demo\demo_DevKitBoard\include\app_config.h:192:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\demo\demo_DevKitBoard\include\app_config.h:193:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\demo\demo_DevKitBoard\include\app_config.h:195:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\demo\demo_edr\bt_decode.c:637:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\demo\demo_edr\bt_decode.c:686:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\demo\demo_edr\bt_decode.c:727:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\demo\demo_edr\include\app_config.h:33:#define CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE          //四路ADC硬件全开
+apps\demo\demo_uvc\board\wl82\board_develop.c:394:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\demo\demo_uvc\board\wl82\board_develop_cfg.h:77://#define CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\demo\demo_uvc\board\wl82\board_develop_cfg.h:97:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\demo\demo_uvc\board\wl82\board_develop_cfg.h:98:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\demo\demo_uvc\board\wl82\board_develop_cfg.h:100:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\demo\demo_uvc\board\wl82\board_dev_kit.c:396:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\demo\demo_uvc\include\app_config.h:140:#define CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE          //四路ADC硬件全开
+apps\demo\demo_uvc\include\app_config.h:143:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\demo\demo_uvc\include\app_config.h:147:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\demo\demo_uvc\include\app_config.h:148:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\demo\demo_uvc\include\app_config.h:150:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\wifi_camera\board\wl82\board_develop.c:395:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_camera\board\wl82\board_develop_cfg.h:77://#define CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_camera\board\wl82\board_develop_cfg.h:97:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_camera\board\wl82\board_develop_cfg.h:98:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_camera\board\wl82\board_develop_cfg.h:100:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\wifi_camera\board\wl82\board_dev_kit.c:407:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_camera\include\app_config.h:147:#define CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE          //四路ADC硬件全开
+apps\wifi_camera\include\app_config.h:150:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_camera\include\app_config.h:154:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_camera\include\app_config.h:155:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_camera\include\app_config.h:157:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\wifi_ipc\board\wl82\board_7912A.c:438:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_ipc\board\wl82\board_7916A.c:372:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_ipc\board\wl82\board_config.h:98:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_ipc\board\wl82\board_config.h:99:#define CONFIG_AISP_MIC1_ADC_CHANNEL        3		//本地唤醒右mic通道
+apps\wifi_ipc\board\wl82\board_config.h:104:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_ipc\board\wl82\board_config.h:177:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_ipc\board\wl82\board_config.h:178:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_ipc\board\wl82\board_config.h:180:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\wifi_ipc\board\wl82\board_config.h:230:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_ipc\board\wl82\board_config.h:231:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_ipc\board\wl82\board_config.h:233:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\wifi_ipc\board\wl82\board_config.h:290:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_ipc\board\wl82\board_config.h:291:#define CONFIG_AISP_MIC1_ADC_CHANNEL        3		//本地唤醒右mic通道
+apps\wifi_ipc\board\wl82\board_config.h:296:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_ipc\board\wl82\board_config.h:351:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_ipc\board\wl82\board_config.h:352:#define CONFIG_AISP_MIC1_ADC_CHANNEL        3		//本地唤醒右mic通道
+apps\wifi_ipc\board\wl82\board_config.h:357:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_ipc\board\wl82\board_config.h:398:#define CONFIG_AISP_MIC0_ADC_CHANNEL        0		//本地唤醒左mic通道
+apps\wifi_ipc\board\wl82\board_config.h:399:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_ipc\board\wl82\board_config.h:401:#define CONFIG_AISP_MIC1_ADC_CHANNEL        1		//本地唤醒右mic通道
+apps\wifi_ipc\include\app_config.h:134:#define CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE          //四路ADC硬件全开
+apps\wifi_ipc\include\app_config.h:137:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_ipc\include\app_config.h:141:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_ipc\include\app_config.h:144:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_ipc\include\app_config.h:147:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\wifi_story_machine\app_music.c:2015:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\app_music.c:2963:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\app_music.c:2965:        adc_multiplex_set_gain("mic", BIT(CONFIG_ASR_CLOUD_ADC_CHANNEL), CONFIG_AISP_MIC_ADC_GAIN);
+apps\wifi_story_machine\app_music.c:3100:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\app_music_dui.c:1819:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\app_music_dui.c:1821:        adc_multiplex_set_gain("mic", BIT(CONFIG_ASR_CLOUD_ADC_CHANNEL), CONFIG_AISP_MIC_ADC_GAIN);
+apps\wifi_story_machine\app_music_dui.c:1942:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\app_music_tencent.c:1477:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\app_music_tencent.c:2416:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\app_music_tencent.c:2418:        adc_multiplex_set_gain("mic", BIT(CONFIG_ASR_CLOUD_ADC_CHANNEL), CONFIG_AISP_MIC_ADC_GAIN);
+apps\wifi_story_machine\app_music_tencent.c:2584:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\board\wl82\board_7911B_develop_cfg.h:35:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_story_machine\board\wl82\board_7911B_develop_cfg.h:36:#define CONFIG_AISP_MIC1_ADC_CHANNEL        3		//本地唤醒右mic通道
+apps\wifi_story_machine\board\wl82\board_7911B_develop_cfg.h:41:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_story_machine\board\wl82\board_7911B_dui_cfg.h:42:#define CONFIG_AISP_MIC0_ADC_CHANNEL        0		//本地唤醒左mic通道
+apps\wifi_story_machine\board\wl82\board_7911B_dui_cfg.h:43:#define CONFIG_AISP_MIC_ADC_GAIN            100		//本地唤醒mic增益
+apps\wifi_story_machine\board\wl82\board_7911B_dui_cfg.h:45:#define CONFIG_AISP_MIC1_ADC_CHANNEL        1		//本地唤醒右mic通道
+apps\wifi_story_machine\board\wl82\board_7913A_cfg.h:51:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_story_machine\board\wl82\board_7913A_cfg.h:52:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_story_machine\board\wl82\board_7913A_cfg.h:54:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\wifi_story_machine\board\wl82\board_7916A.c:467:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\board\wl82\board_7916A_demo_cfg.h:48:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_story_machine\board\wl82\board_7916A_demo_cfg.h:49:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_story_machine\board\wl82\board_7916A_demo_cfg.h:51:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\wifi_story_machine\board\wl82\board_7916A_develop_cfg.h:41:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_story_machine\board\wl82\board_7916A_develop_cfg.h:42:#define CONFIG_AISP_MIC1_ADC_CHANNEL        3		//本地唤醒右mic通道
+apps\wifi_story_machine\board\wl82\board_7916A_develop_cfg.h:47:#define CONFIG_AISP_MIC_ADC_GAIN            80		//本地唤醒mic增益
+apps\wifi_story_machine\board\wl82\board_7916A_dev_kit_cfg.h:62:#define CONFIG_AISP_MIC0_ADC_CHANNEL        1		//本地唤醒左mic通道
+apps\wifi_story_machine\board\wl82\board_7916A_dev_kit_cfg.h:63:#define CONFIG_AISP_MIC_ADC_GAIN            100		//本地唤醒mic增益
+apps\wifi_story_machine\board\wl82\board_7916A_dev_kit_cfg.h:65:#define CONFIG_AISP_MIC1_ADC_CHANNEL        0		//本地唤醒右mic通道
+apps\wifi_story_machine\bt_ble\bt_decode.c:805:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\bt_ble\bt_decode.c:853:#if defined CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE && defined CONFIG_AISP_LINEIN_ADC_CHANNEL && defined CONFIG_AEC_LINEIN_CHANNEL_ENABLE
+apps\wifi_story_machine\bt_ble\bt_decode.c:892:#ifdef CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\include\app_config.h:353:#define CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE   //四路ADC硬件全开
+apps\wifi_story_machine\wifi_app_task.c:857:#if defined CONFIG_ALI_SDK_ENABLE && defined CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\wifi_app_task.c:861:    set_ag_rec_channel_bit_map(BIT(CONFIG_AISP_MIC0_ADC_CHANNEL));
+apps\wifi_story_machine\wifi_app_task.c:864:#if defined CONFIG_TVS_SDK_ENABLE && defined CONFIG_ALL_ADC_CHANNEL_OPEN_ENABLE
+apps\wifi_story_machine\wifi_app_task.c:868:    set_tvs_rec_channel_bit_map(BIT(CONFIG_AISP_MIC0_ADC_CHANNEL));

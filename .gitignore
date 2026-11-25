@@ -1,0 +1,16 @@
+# 杰理 SDK 大体积静态库与编译输出
+*.a
+*.o
+*.d
+*.bin
+*.exe
+objs/
+tools/
+
+# Android 编译缓存与安装包
+.gradle/
+build/
+captures/
+*.apk
+*.aab
+local.properties
